@@ -19,7 +19,7 @@ I've got the first unit up and running. I need to design a case and solder a few
 ## Photos
 ![alt tag](https://github.com/lizcorson/mqtt_rht/blob/master/photos/firstunit.jpg)
 ![alt tag](https://github.com/lizcorson/mqtt_rht/blob/master/photos/mqttdashboard.png)
-![alt tag](https://github.com/lizcorson/colormixer/blob/master/schematic/esp8266_htu21d.png)
+![alt tag](https://github.com/lizcorson/mqtt_rht/blob/master/schematic/esp8266_htu21d.png)
 
 ## Other
 

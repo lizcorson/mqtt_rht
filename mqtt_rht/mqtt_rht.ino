@@ -2,7 +2,7 @@
  *  Publish temperature/humidity sensor data with MQTT. Based on ESP8266 MQTT example.
  *
  * Liz Corson
- * 5 April 2016
+ * 21 May 2016
  */
 
 #include <Wire.h>
@@ -12,9 +12,9 @@
 
 // Update these with values suitable for your network.
 
-const char* ssid = "...";
-const char* password = "...";
-const char* mqtt_server = "...";
+const char* ssid = "***";
+const char* password = "***";
+const char* mqtt_server = "xxx.xxx.xxx.xxx";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -94,13 +94,8 @@ void loop() {
   if ((unsigned long)(millis() - lastMsg) >= msgDelay) {
     lastMsg = millis();
 
-    //I don't have the sensors wired up yet so I'm temporarily generating random values.
-
-    //float temp = myHumidity.readTemperature()*1.8+32; //convert to F
-    //float rh = myHumidity.readHumidity();
-
-    float temp = random(-4000,10000)/100.0;
-    float rh = random(0,10000)/100.0;
+    float temp = myHumidity.readTemperature()*1.8+32; //convert to F
+    float rh = myHumidity.readHumidity();
 
     Serial.println(temp);
     Serial.println(rh);
